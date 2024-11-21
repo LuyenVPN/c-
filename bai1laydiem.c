@@ -15,7 +15,6 @@ void chuanHoa(char* str) {
                 result[idx++] = toupper(str[i]);
                 capitalize = 0;
             } else {
-                // Các ký tự khác viết thường
                 result[idx++] = tolower(str[i]);
             }
         } else {
@@ -43,18 +42,18 @@ int main() {
     char name[81]; 
 
     
-    printf("Nhập số bộ test: ");
+    printf("Nhap so bo test: ");
     scanf("%d", &T);
     getchar(); 
 
     for (int t = 0; t < T; t++) {
         
-        printf("Nhập họ tên: ");
+        printf("Nhap ho ten: ");
         fgets(name, sizeof(name), stdin);
         name[strcspn(name, "\n")] = '\0';
         chuanHoa(name);
 
-        printf("Họ tên chuẩn hóa: %s\n", name);
+        printf("Ho ten chuan hoa: %s\n", name);
     }
 
     return 0;
